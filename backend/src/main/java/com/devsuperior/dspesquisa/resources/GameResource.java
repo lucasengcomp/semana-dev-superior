@@ -1,7 +1,7 @@
 package com.devsuperior.dspesquisa.resources;
 
-import com.devsuperior.dspesquisa.entities.Game;
-import com.devsuperior.dspesquisa.repositories.GameRepository;
+import com.devsuperior.dspesquisa.dto.GameDTO;
+import com.devsuperior.dspesquisa.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +15,11 @@ import java.util.List;
 public class GameResource {
 
     @Autowired /*disponibiliza a injeção de dependencia sem precisar fazê-la manualmente */
-    private GameRepository gameRepository;
+    private GameService service;
 
     @GetMapping
-    public ResponseEntity<List<Game>> findAll() {
-        List<Game> list = gameRepository.findAll();
+    public ResponseEntity<List<GameDTO>> findAll() {
+        List<GameDTO> list = service.findAll();
         return ResponseEntity.ok().body(list);
     }
 
