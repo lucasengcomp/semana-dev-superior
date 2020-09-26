@@ -12,7 +12,7 @@ const Routes = () => (
         <Home />
       </Route>
       <Route path="/records">
-        <Records />
+        <Records  />
       </Route>
     </Switch>
   </BrowserRouter>

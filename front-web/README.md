@@ -9,6 +9,7 @@ Para rodar a aplicação instale os seguintes pacotes:
 - clone o repositório para uma pasta
 - com o terminal aberto na pasta do projeto execute: npm install
 - em seguida instale o pacote de rotas com: npm install --save react-router-dom
+- instale a biblioteca para requisições do end-points axios com o comando: npm install axios
 - instale a biblioteca moment para tratar as datas com: npm install moment
 - rode o projeto com: npm run start
 
