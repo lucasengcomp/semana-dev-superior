@@ -16,9 +16,9 @@ const Records = () => {
   }
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/records?linesPerPage=12&page=3`)
+    axios.get(`${BASE_URL}/records?linesPerPage=12&page=${acitvePage}`)
     .then(response => setRecordsResponse(response.data));
-  }, []);
+  }, [acitvePage]);
 
   return (
   <div className="page-container">
