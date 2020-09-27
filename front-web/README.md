@@ -10,4 +10,4 @@ Para rodar a aplicação instale os seguintes pacotes:
 - Rode o projeto com: npm run start.
 
 ## Créditos
-A aplicação foi desenvolvida durante a primeira semana dev-superior pelos professores Nélio Alves (https://github.com/acenelio) e Washington Soares (https://github.com/washingtonsoares).
+A aplicação foi desenvolvida durante a primeira semana dev-superior pelo professor Washington Soares (https://github.com/washingtonsoares).
