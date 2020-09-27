@@ -1,88 +1,55 @@
 package com.devsuperior.dspesquisa.dto;
 
-import com.devsuperior.dspesquisa.entities.Record;
-import com.devsuperior.dspesquisa.entities.enums.Platform;
-
 import java.io.Serializable;
 import java.time.Instant;
+
+import com.devsuperior.dspesquisa.entities.Record;
+import com.devsuperior.dspesquisa.entities.enums.Platform;
+import lombok.Getter;
+import lombok.Setter;
 
 public class RecordDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Getter
+    @Setter
     private Long id;
+
+    @Getter
+    @Setter
     private Instant moment;
+
+    @Getter
+    @Setter
     private String name;
+
+    @Getter
+    @Setter
     private Integer age;
+
+    @Getter
+    @Setter
     private String gameTitle;
-    private Platform gamePlataform;
+
+    @Getter
+    @Setter
+    private Platform gamePlatform;
+
+    @Getter
+    @Setter
     private String genreName;
 
     public RecordDTO() {
+
     }
 
     public RecordDTO(Record entity) {
-        id = entity.getId();
-        moment = entity.getMoment();
-        name = entity.getName();
-        age = entity.getAge();
-        gameTitle = entity.getGame().getTitle();
-        gamePlataform = entity.getGame().getPlatform();
-        genreName = entity.getGame().getGenre().getName();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Instant getMoment() {
-        return moment;
-    }
-
-    public void setMoment(Instant moment) {
-        this.moment = moment;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getGameTitle() {
-        return gameTitle;
-    }
-
-    public void setGameTitle(String gameTitle) {
-        this.gameTitle = gameTitle;
-    }
-
-    public Platform getGamePlataform() {
-        return gamePlataform;
-    }
-
-    public void setGamePlataform(Platform gamePlataform) {
-        this.gamePlataform = gamePlataform;
-    }
-
-    public String getGenreName() {
-        return genreName;
-    }
-
-    public void setGenreName(String genreName) {
-        this.genreName = genreName;
+        this.id = entity.getId();
+        this.moment = entity.getMoment();
+        this.name = entity.getName();
+        this.age = entity.getAge();
+        this.gameTitle = entity.getGame().getTitle();
+        this.gamePlatform = entity.getGame().getPlatform();
+        this.genreName = entity.getGame().getGenre().getName();
     }
 }

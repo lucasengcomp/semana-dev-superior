@@ -1,5 +1,8 @@
 package com.devsuperior.dspesquisa.entities;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
@@ -13,11 +16,24 @@ public class Record implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
+    @Setter
     private Long id;
+
+    @Getter
+    @Setter
     private String name;
+
+    @Getter
+    @Setter
     private Integer age;
+
+    @Getter
+    @Setter
     private Instant moment;
 
+    @Getter
+    @Setter
     @ManyToOne
     @JoinColumn(name = "game_id")
     private Game game;
@@ -30,46 +46,6 @@ public class Record implements Serializable {
         this.name = name;
         this.age = age;
         this.moment = moment;
-        this.game = game;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public Instant getMoment() {
-        return moment;
-    }
-
-    public void setMoment(Instant moment) {
-        this.moment = moment;
-    }
-
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
         this.game = game;
     }
 
